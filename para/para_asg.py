@@ -55,4 +55,22 @@ def correlationCoeff(stockOne,stockTwo):
     r_value = np.corrcoef(last_quote1, last_quote2)
     return r_value[0][1]
 
-print correlationCoeff('MSFT', 'AAPL')
+correlations = [correlationCoeff('MSFT','AAPL'), correlationCoeff('MSFT', 'IBM'),
+ correlationCoeff('MSFT','GE'), correlationCoeff('MSFT', 'FB'),
+ correlationCoeff('AAPL','IBM'), correlationCoeff('AAPL', 'GE'), correlationCoeff('AAPL','FB'),
+ correlationCoeff('IBM','GE'), correlationCoeff('IBM', 'FB'),correlationCoeff('GE','FB')]
+
+ui.plot(correlations[0:2], 'b')
+ui.show()
+ui.plot(correlations[2:4], 'r')
+ui.show()
+ui.plot(correlations[4:6], 'g')
+ui.show()
+ui.plot(correlations[6:8], 'y')
+ui.show()
+ui.plot(correlations[8:], 'c')
+ui.show()
+
+investList = [correlations[0:2], correlations[2:4], correlations[4:6], correlations[6:8], correlations[8:]]
+print investList.index(min(investList))
+print "GE and FB"
