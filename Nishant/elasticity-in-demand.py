@@ -6,8 +6,10 @@ x.shape == y.shape
 
 fig,ax = plt.subplots(figsize=(14,8))
 ax.plot(x,y,'r-')
-plt.axvline(x=30,ymin=0, ymax=0.30)
+plt.axvline(x=30,ymin=0, ymax=0.50)
+plt.axvline(x=20, ymin=0, ymax=0.60)
 plt.axhline(y=40, xmin=0,xmax=0.50)
+plt.axhline(y=60, xmin=0,xmax=0.60)
 ax.set_title("Example of Demand Curve", fontsize=24)
 ax.set_xlabel("Quantity Demanded", fontsize=18)
 ax.set_ylabel("Price", fontsize=18)
