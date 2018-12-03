@@ -21,7 +21,12 @@ def stringBattle_NLetters(factor):
     newArray = []
     for key,val in letterHashTable.items():
         newArray.append(key*(val+factor))
-    print(newArray)
-    return newArray
+    newStr = ''.join(newArray)
+    filename = '/Users/rchatter/Desktop/DS/Python/PieranDataAssistance/Nishant/battle.txt'
+    file = open(filename, 'w')
+    file.write(newStr)
+    file.close()
+    print(newStr)
+    return newStr
 
 stringBattle_NLetters(5);
