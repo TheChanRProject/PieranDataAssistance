@@ -17,7 +17,11 @@ def stringBattle_NLetters(factor):
     if not isinstance(myString, str):
         raise TypeError
     letterArray = list(myString)
-    print(letterArray)
-    return letterArray
+    letterHashTable = {i:myString.count(i) for i in letterArray}
+    newArray = []
+    for key,val in letterHashTable.items():
+        newArray.append(key*(val+factor))
+    print(newArray)
+    return newArray
 
 stringBattle_NLetters(5);
