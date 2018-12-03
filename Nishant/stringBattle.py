@@ -29,4 +29,4 @@ def stringBattle_NLetters(factor):
     print(newStr)
     return newStr
 
-stringBattle_NLetters(5);
+stringBattle_NLetters(10);
