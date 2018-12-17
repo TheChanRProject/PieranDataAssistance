@@ -10,5 +10,3 @@ def email_validator():
         message = "Please write a valid email address and try again."
     return message
 print(email_validator())
-print(email_validator())
-print(email_validator())
