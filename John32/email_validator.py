@@ -7,6 +7,7 @@ def email_validator():
         email_prefix = input_email[: at_index]
         email_domain = input_email[at_index + 1:]
         if '.' in input_email and email_domain[0] == input_email[at_index + 1]:
-            return "This email is valid."
+            message = "This email is valid."
         else:
-            return "Please write a valid email address and try again."
+            message = "Please write a valid email address and try again."
+        return message 
