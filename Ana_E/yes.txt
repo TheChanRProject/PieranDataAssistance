@@ -4,7 +4,7 @@ OK
 okey-dokey
 by all means
 affirmative
-aye aye 
+aye aye
 roger
 10-4
 uh-huh
@@ -19,8 +19,16 @@ ja
 surely
 amen
 fo' swizzle
+fo swizzle 
 totally
 sure
-yessir 
+yessir
 fuck yea
 fuck yeah
+absolutely
+indeed
+arr
+yessiree
+hooah
+hooah!
+please
