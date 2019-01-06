@@ -4,4 +4,4 @@ display(Markdown("# Absolute Value"))
 
 display(Markdown("$$ \\mid n \\mid = \\text{n's distance from 0} $$"))
 
-display(HTML('<img src="absolute-value.svg" />'))
+display(Image("PieranDataAssistance/Learner/numberline.png"))
