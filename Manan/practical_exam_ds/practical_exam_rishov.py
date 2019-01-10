@@ -19,3 +19,5 @@ ax.plot()
 # Measuring Linear Relationships Between the Variables
 
 # Correlation Matrix
+
+correlation_matrix = boston_df.corr().round(2)
