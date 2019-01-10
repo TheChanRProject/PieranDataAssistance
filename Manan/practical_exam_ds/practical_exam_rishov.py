@@ -21,3 +21,7 @@ ax.plot()
 # Correlation Matrix
 
 correlation_matrix = boston_df.corr().round(2)
+
+# Visualization using seaborn heatmap
+
+sns.heatmap(data=correlation_matrix, annot=True)
