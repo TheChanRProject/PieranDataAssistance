@@ -25,3 +25,19 @@ correlation_matrix = boston_df.corr().round(2)
 # Visualization using seaborn heatmap
 
 sns.heatmap(data=correlation_matrix, annot=True).set_title("Correlation Matrix")
+
+# Scatterplots of features with target
+
+plt.figure(figsize=(20,5))
+
+features = ['LSTAT', 'RM']
+target = boston_df['MEDV']
+
+for i,col in enumerate(features):
+    plt.subplot(1, len(features),i+1)
+    x = boston_df[col]
+    y = target
+    plt.scatter(x,y,marker='o')
+    plt.title(col)
+    plt.xlabel(f"Correlation between {col} and MEDV")
+    plt.ylabel('MEDV')
