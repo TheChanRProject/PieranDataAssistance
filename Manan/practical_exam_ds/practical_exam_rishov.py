@@ -41,3 +41,18 @@ for i,col in enumerate(features):
     plt.title(col)
     plt.xlabel(f"Correlation between {col} and MEDV")
     plt.ylabel('MEDV')
+
+ # Concatenate features into one dataframe
+
+X = pd.DataFrame(np.c_[boston_df['LSTAT'], boston_df['RM']], columns = ['LSTAT','RM'])
+
+# Setting dependent variable MEDV as Y
+Y = boston_df['MEDV']
+
+# Splitting data into training and testing sets. Training will be on 80% of the samples
+# and testing on the other 20%
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.2, random_state=5)
+print(f"Shape of X training set: {X_train.shape} \nShape of Y training set: {X_test.shape} \nShape of X test set: {Y_train.shape} \nShape of Y test set: {Y_test.shape}")
