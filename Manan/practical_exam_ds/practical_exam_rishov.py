@@ -28,7 +28,7 @@ sns.heatmap(data=correlation_matrix, annot=True).set_title("Correlation Matrix")
 
 # Scatterplots of features with target
 
-plt.figure(figsize=(20,5))
+plt.figure(figsize=(10,3))
 
 features = ['LSTAT', 'RM']
 target = boston_df['MEDV']
