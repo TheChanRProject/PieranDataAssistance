@@ -8,3 +8,10 @@ import tensorflow as tf
 
 boston_df = pd.read_csv("Manan/practical_exam_ds/data/housing.csv")
 boston_df.head()
+
+sns.set(rc={'figure.figsize':(10.5,5.5)})
+ax = sns.distplot(boston_df['MEDV'], bins=30)
+ax.set_title("Distribution of Boston House Prices")
+ax.set_xlabel("Price in Thousands ($)")
+ax.set_ylabel("Frequency")
+ax.plot()
