@@ -15,3 +15,7 @@ ax.set_title("Distribution of Boston House Prices")
 ax.set_xlabel("Price in Thousands ($)")
 ax.set_ylabel("Frequency")
 ax.plot()
+
+# Measuring Linear Relationships Between the Variables
+
+# Correlation Matrix
