@@ -56,3 +56,39 @@ from sklearn.model_selection import train_test_split
 
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.2, random_state=5)
 print(f"Shape of X training set: {X_train.shape} \nShape of Y training set: {X_test.shape} \nShape of X test set: {Y_train.shape} \nShape of Y test set: {Y_test.shape}")
+
+# Training the model on sklearn's LinearRegression
+
+from sklearn.linear_model import LinearRegression
+
+# Importing mean squared error for evaluating epsilon term with Root Mean Squared Error (RMSE) and R2
+
+from sklearn.metrics import mean_squared_error, r2_score
+
+reg_model = LinearRegression()
+reg_model.fit(X_train, Y_train)
+
+Y_train_predict = reg_model.predict(X_train)
+rmse = (np.sqrt(mean_squared_error(Y_train, Y_train_predict)))
+r2 = r2_score(Y_train, Y_train_predict)
+
+print(f"Model Performance for Training \n \
+-------------------------------------- \n \
+Root Mean Squared Error: {rmse} \n \
+R2 score: {r2}")
+
+reg_model = LinearRegression()
+reg_model.fit(X_test, Y_test)
+
+Y_test_predict = reg_model.predict(X_test)
+rmse = (np.sqrt(mean_squared_error(Y_test, Y_test_predict)))
+r2 = r2_score(Y_test, Y_test_predict)
+
+print(f"Model Performance for Training \n \
+-------------------------------------- \n \
+Root Mean Squared Error: {rmse} \n \
+R2 score: {r2}")
+
+# Visualizing y and y hat
+
+plt.scatter(Y_test, Y_test_predict)
