@@ -11,9 +11,6 @@ mDict = {}
 for i in message_set:
     mDict[i] = message_list.count(i)
 
-
-
-
 newStrList = []
 for key,val in mDict.items():
     newStrList.append(key*(val+1))

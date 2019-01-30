@@ -1,12 +1,20 @@
-function newString(string) {
-  const strArr = string.split('')
-  var count = {};
-  for (var i = 0; i < strArr.length; i++) {
-    if ((string.match(new RegExp(strArr[i], "g"))).length >= 1) {
-      count[string[i]] = (string.match(new RegExp(string[i], "g"))).length;
-    }
-  }
-  return count
-}
+from collections var OrderedDict = require('OrderedDict');
 
-newString('yeah')
+message = input('Put in your message here: ');
+message_list = list(message);
+
+// Create an ordered set
+message_set = OrderedDict.fromkeys(message_list);
+
+// Message Dictionary
+mDict = {};
+for (i in message_set) {
+    mDict[i] = message_list.count(i);
+}
+newStrList = [];
+for (key,val in mDict.items()) {
+    newStrList.push(key*(val+1));
+}
+newMessage = ''.join(newStrList);
+
+console.log(newMessage);
