@@ -20,4 +20,4 @@ for key,val in mDict.items():
 
 newMessage = ''.join(newStrList)
 
-print(newMessage)
+print(newMessage) 
