@@ -1,12 +1,18 @@
+from collections import OrderedDict
+
 message = input("Put in your message here: ")
 message_list = list(message)
 
-# Create a dictionary
-message_set = set(message_list)
-print(message_set)
+# Create an ordered set
 
-# Set up dictionary
+message_set = OrderedDict.fromkeys(message_list)
+print(list(message_set.keys()))
+# Message Dictionary
 
-for letter in message_set:
-    message_dict = {letter : message_list.count(letter)}
-    print(message_dict['y'])
+mDict = {}
+for i in message_set:
+    mDict[i] = message_list.count(i)
+    print(mDict)
+
+# Adding extra letter
+newMessage = []
