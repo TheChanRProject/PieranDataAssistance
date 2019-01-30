@@ -12,7 +12,7 @@ for i in message_set:
     mDict[i] = message_list.count(i)
 
 
-print(mDict.items())
+
 
 newStrList = []
 for key,val in mDict.items():
