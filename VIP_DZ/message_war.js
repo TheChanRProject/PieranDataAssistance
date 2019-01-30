@@ -1,20 +1,18 @@
-from collections var OrderedDict = require('OrderedDict');
-
-message = input('Put in your message here: ');
-message_list = list(message);
-
-// Create an ordered set
-message_set = OrderedDict.fromkeys(message_list);
-
-// Message Dictionary
-mDict = {};
-for (i in message_set) {
-    mDict[i] = message_list.count(i);
+function newString(string) {
+  const strArr = string.split('')
+  var counts = {};
+  for (var i = 0; i < strArr.length; i++) {
+    if ((string.match(new RegExp(strArr[i], "g"))).length >= 1) {
+      counts[string[i]] = (string.match(new RegExp(string[i], "g"))).length;
+    }
+  }
+  var countArr = Object.entries(counts)
+  var newStrArr = []
+  for(const [key,value] in countArr) {
+    var product = key.repeat(value + 1)
+    newStrArr.push(product)
+  }
+  return newStrArr 
 }
-newStrList = [];
-for (key,val in mDict.items()) {
-    newStrList.push(key*(val+1));
-}
-newMessage = ''.join(newStrList);
 
-console.log(newMessage);
+newString('yeah')
