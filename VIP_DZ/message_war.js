@@ -9,10 +9,10 @@ function newString(string) {
   var countArr = Object.entries(counts)
   var newStrArr = []
   for(const [key,value] in countArr) {
-    var product = key.repeat(value + 1)
-    newStrArr.push(product)
+      newStrArr.push(key.repeat(value + 1))
+
   }
-  return newStrArr 
+  return newStrArr
 }
 
 newString('yeah')
