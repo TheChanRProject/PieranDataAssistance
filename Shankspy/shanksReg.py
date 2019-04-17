@@ -1,10 +1,9 @@
 import pandas as pd
-import seaborn as sns
-import numpy as np
-import plotly.plotly as py
-import plotly.graph_objs as go
-from sklearn import preprocessing
-from sklearn.model_selection import cross_validate
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+from IPython.display import display, Markdown 
 
 from sklearn.linear_model import LinearRegression
 url = 'https://raw.githubusercontent.com/shanksghub/FootballStats/master/FootballStats.csv'
@@ -41,3 +40,5 @@ def regFunction(df, a,b, position):
 
 forwardFrame = df1.loc[df1['position'] == 'Forward']
 forwardFrame.head()
+
+print(regFunction(forwardFrame, 'shots', 'goals', 'Forward'))
