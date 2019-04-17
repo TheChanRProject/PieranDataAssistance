@@ -6,3 +6,6 @@ from sklearn.metrics import r2_score, mean_squared_error
 
 def output(x):
     return 1.8*x + 32
+
+X = [i for i in range(0,100, 0.25)]
+print(X)
