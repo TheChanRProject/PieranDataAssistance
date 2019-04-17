@@ -22,7 +22,7 @@ def regFunction(df, a,b, position):
     Y_pred = reg.predict(X_test)
     r_square = r2_score(Y_pred, Y_test)
     mse = mean_squared_error(Y_pred, Y_test)
-    display(Markdown(f"$ r^2 value = {r_square*100}% $"))
+    display(Markdown(f"$ r^2 = {r_square*100}% $"))
     display(Markdown("$\\frac{1}{n}\\sum_{i=1}^{n}(\hat{y} - y)^2$" + f"= {mse}"))
     # visualization
     plt.figure(figsize=(12,8))
@@ -34,7 +34,7 @@ def regFunction(df, a,b, position):
     plt.show()
     plt.savefig(f"reg_{a}_{b}_{position}.png")
     # Reg Frame
-    reg_dict = {f'test_{a}': X_test, f'test_{b}': Y_test, f'pred_{b}': Y_pred}
+    reg_dict = {f'test_{a}': X_test[-1], f'test_{b}': Y_test[-1], f'pred_{b}': Y_pred[-1]}
     regFrame = pd.DataFrame.from_dict(reg_dict)
     return regFrame
 
