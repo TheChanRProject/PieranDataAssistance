@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
-from IPython.display import display, Markdown 
+from IPython.display import display, Markdown
 
 from sklearn.linear_model import LinearRegression
 url = 'https://raw.githubusercontent.com/shanksghub/FootballStats/master/FootballStats.csv'
@@ -32,7 +32,7 @@ def regFunction(df, a,b, position):
     plt.xlabel(a, size=15)
     plt.ylabel(b, size=15)
     plt.show()
-    plt.savefig(f"images/reg_{a}_{b}_{position}.png")
+    plt.savefig(f"reg_{a}_{b}_{position}.png")
     # Reg Frame
     reg_dict = {f'test_{a}': X_test, f'test_{b}': Y_test, f'pred_{b}': Y_pred}
     regFrame = pd.DataFrame.from_dict(reg_dict)
