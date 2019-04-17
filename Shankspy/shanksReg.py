@@ -38,4 +38,6 @@ def regFunction(df, a,b, position):
     reg_dict = {f'test_{a}': X_test, f'test_{b}': Y_test, f'pred_{b}': Y_pred}
     regFrame = pd.DataFrame.from_dict(reg_dict)
     return regFrame
-    
+
+forwardFrame = df1.loc[df1['position'] == 'Forward']
+forwardFrame.head()
