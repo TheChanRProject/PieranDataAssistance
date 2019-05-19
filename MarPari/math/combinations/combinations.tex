@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+%
+%Margin - 1 inch on all sides
+%
+\usepackage[letterpaper]{geometry}
+\usepackage{times}
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+
+%
+%Doublespacing
+%
+\usepackage{setspace}
+\doublespacing
+
+%
+%Rotating tables (e.g. sideways when too long)
+%
+\usepackage{rotating}
+
+
+%
+%Fancy-header package to modify header/page numbering (insert last name)
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{Chatterjee \thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%To make sure we actually have header 0.5in away from top edge
+%12pt is one-sixth of an inch. Subtract this from 0.5in to get headsep value
+\setlength\headsep{0.333in}
+
+%
+%Works cited environment
+%(to start, use \begin{workscited...}, each entry preceded by \bibent)
+% - from Ryan Alcock's MLA style file
+%
+\newcommand{\bibent}{\noindent \hangindent 40pt}
+\newenvironment{workscited}{\newpage \begin{center} Works Cited \end{center}}{\newpage }
+
+
+%
+%Begin document
+%
+\begin{document}
+\begin{flushleft}
+
+%%%%First page name, class, etc
+Rishov\\
+MarPari\\
+May 19 2019\\
+
+
+%%%%Title
+\begin{center}
+Calculating Euclidean Distances for N Points Using Combinations
+\end{center}
+
+
+%%%%Changes paragraph indentation to 0.5in
+\setlength{\parindent}{0.5in}
+%%%%Begin body of paper here
+In order to calculate euclidean distances for N number of points, regardless of what  dimensional space the points come from, it is very important to understand how to get the distances between all the points. This means that for each distance, two points are required so this is a great use case for using combinations where n represents the number of points and r represents the length of each set. For our situation, we want unique pairs of all the points so we need to do the following computation:
+$$ _nC_r = \frac{n!}{r!(n-r)!} $$
+Let us try this for 3 points
+$$ _3C_2 = \frac{3!}{2!(3-2)!} = \frac{6}{2} = 3 $$
+Now we know there are 3 possible combinations for arranging 3 points as unique pairs of points.
+
+We can use this knowledge to expand to calculating all euclidean distances for a greater amount of points.
+For n = 10,
+$$ _10C_2 = \frac{10!}{8!(10-8)!} = \frac{90}{2} = 45 $$
+
+This means we will have a total of 45 euclidean distances for 10 points. 
+
+
+
+\setlength{\parindent}{0.5in}
+
+
+%%%%Works cited
+\begin{workscited}
+
+
+
+\end{workscited}
+
+\end{flushleft}
+\end{document}
+\}
