@@ -16,4 +16,4 @@ def point_input():
     return distances
 
 
-print(len(point_input()))
+print(point_input())
