@@ -4,7 +4,7 @@ class Circle():
     #class object attribute
 
 
-    def __init__(self, radius=1):
+    def __init__(self, radius):
 
         self.radius = radius
         self.pi = math.pi
@@ -13,6 +13,6 @@ class Circle():
         return round((self.radius * self.pi * 2), 2)
 
 
-circ = Circle()
+circ = Circle(radius=10)
 
 print(circ.get_circumference())
